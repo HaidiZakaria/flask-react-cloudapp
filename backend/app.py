@@ -10,5 +10,10 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def message():
     return jsonify({"message": "Hello from Flask API running on GCP!"})
 
+@app.route("/")
+def home():
+    return "Flask API running successfully!"
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

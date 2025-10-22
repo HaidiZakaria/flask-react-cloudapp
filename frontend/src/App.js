@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/message")
+      fetch("https://flask-api-7mncvfbyba-ew.a.run.app/api/message")
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch(() => setMessage("Failed to fetch API."));
